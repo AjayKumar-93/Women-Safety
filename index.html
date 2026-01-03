@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>🛡️ My Companion — Safety App</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="login-bg">
+
+<div id="flashlight"></div>
+
+<!-- LOGIN -->
+<div class="app" id="accountForm">
+  <h1>🛡️ My Companion</h1>
+  <img class="girl" src="https://thvnext.bing.com/th/id/OIP.aMkS2hzROGl5eT9rZWIiAQHaEK?w=326&h=183">
+  <p class="lead">🔐 Login or Create Account</p>
+
+  <div id="loginSection">
+    <label>👤 Name</label>
+    <input id="loginName" type="text">
+    <label>🔑 Password</label>
+    <input id="loginPassword" type="password">
+    <div class="row">
+      <button id="loginBtn">➡️ Login</button>
+      <button id="showCreateBtn">➕ Create</button>
+    </div>
+  </div>
+
+  <div id="createSection">
+    <label>👤 Name</label>
+    <input id="createName" type="text">
+    <label>🔑 Password</label>
+    <input id="createPassword" type="password">
+    <div class="row">
+      <button id="createBtn">✅ Create</button>
+      <button id="showLoginBtn">↩️ Back</button>
+    </div>
+  </div>
+
+  <div class="status" id="accountStatus">🟢 Ready</div>
+</div>
+
+<!-- MAIN APP -->
+<div class="app" id="mainApp">
+  <h1>👋 WEL COME 💖</h1>
+  <p style="color:#ffd700; font-weight:bold;">Your safety is our priority!</p>
+
+  <div class="card">
+    <strong>📇 Emergency Contacts</strong>
+    <p style="color:#ffd700; font-size:14px; margin:5px 0 10px;">
+      🚨 In case of emergency, contact your trusted person immediately!
+    </p>
+    <div id="contactsList"></div>
+    <div style="margin-top:10px; display:flex; gap:10px;">
+      <input id="newContactName" type="text" placeholder="👤 Name" style="flex:1;">
+      <input id="newContactNumber" type="tel" placeholder="📞 +91XXXXXXXXXX" style="width:180px;">
+    </div>
+    <div class="row">
+      <button id="addContactBtn">➕ Add</button>
+      <button id="clearContactsBtn">🗑️ Clear</button>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:20px;">
+    <button id="sosLocationBtn">🚨 SOS + 📍 Location</button>
+  </div>
+
+  <div class="row" style="margin-top:14px">
+    <button id="callPoliceBtn">👮 Call Police</button>
+    <button id="fakeCallBtn">📱 Fake Call (Mom)</button>
+  </div>
+
+  <div class="status" id="status">🟢 Ready</div>
+  <div class="row" style="margin-top:14px;">
+    <button id="logoutBtn">🚪 Logout</button>
+  </div>
+  <footer>📳 Shake your phone to activate a loud siren and flashlight alert!</footer>
+</div>
+
+<!-- Fake Call -->
+<div id="fake-call-screen">
+  <img src="https://w0.peakpx.com/wallpaper/551/502/HD-wallpaper-mother-daughter-child-cute-parenting-mom-maa-love.jpg" alt="Mom">
+  <h2>Incoming Call</h2>
+  <h3>Mom</h3>
+  <div class="call-btns">
+    <button id="answerBtn" style="background:#4cd964;">📞</button>
+    <button id="declineBtn" style="background:#ff3b30;">❌</button>
+  </div>
+</div>
+
+<div id="answered-call">
+  <h2>Mom (on call...)</h2>
+  <p>“Tell me, where are you? You’re in a critical situation, we’re coming to save you!”</p>
+  <button id="endBtn">End Call</button>
+</div>
+
+<audio id="momVoice" src="mom voice.mp3"></audio>
+<audio id="sirenSound" src="siren.mp3" loop></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
